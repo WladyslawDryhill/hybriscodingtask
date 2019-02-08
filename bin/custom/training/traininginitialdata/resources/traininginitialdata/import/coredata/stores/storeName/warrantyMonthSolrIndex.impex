@@ -1,0 +1,2 @@
+INSERT_UPDATE SolrIndexedProperty;solrIndexedType(identifier)[unique=true];name[unique=true];displayName[lang=en];type(code);fieldValueProvider;facet[default=true];visible[default=true]
+;apparel-ukProductType;warrantyMonth;"Warranty";int;warrantyFieldValueProvider;;;

@@ -13,6 +13,7 @@
 
 	<bean class="de.hybris.platform.commercefacades.product.data.ProductData">
 		<property name="genders" type="java.util.List&lt;de.hybris.training.facades.product.data.GenderData>"/>
+		<property name="warrantyMonth" type="java.lang.Integer" />
 	</bean>
 
 	<bean class="de.hybris.training.facades.product.data.GenderData">

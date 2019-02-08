@@ -551,4 +551,20 @@
 		<property name="itemCleanupHooks" ref="csTicketRetentionHooks"/>
 		<property name="ticketBusinessService" ref="ticketBusinessService"/>
 	</bean>
+
+	<bean id="apparelProductWarrantyPrepareInterceptor" class="de.hybris.training.core.interceptor.ApparelProductWarrantyPrepareInterceptor" />
+
+	<bean id="categoryWarrantyPrepareInterceptor" class="de.hybris.training.core.interceptor.CategoryWarrantyPrepareInterceptor" />
+
+	<bean id="apparelProductWarrantyInterceptorMapping" class="de.hybris.platform.servicelayer.interceptor.impl.InterceptorMapping">
+		<property name="interceptor" ref="apparelProductWarrantyPrepareInterceptor"/>
+		<property name="typeCode" value="ApparelProduct"/>
+	</bean>
+
+	<bean id="categoryWarrantyInterceptorMapping" class="de.hybris.platform.servicelayer.interceptor.impl.InterceptorMapping">
+		<property name="interceptor" ref="categoryWarrantyPrepareInterceptor"/>
+		<property name="typeCode" value="Category"/>
+	</bean>
+
+	<bean id="warrantyFieldValueProvider" class="de.hybris.training.core.provider.WarrantyFieldValueProvider" />
 </beans>

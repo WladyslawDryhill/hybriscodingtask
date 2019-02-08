@@ -189,4 +189,17 @@
 	</bean>
 
 	<bean id="genderData" class="de.hybris.training.facades.product.data.GenderData" scope="prototype"/>
+
+	<bean id="productWarrantyMonthPopulator" class="de.hybris.training.facades.populators.ProductWarrantyMonthPopulator"/>
+	<bean id="searchResultApparelProductWarrantyMonthPopulator" class="de.hybris.training.facades.populators.SearchResultApparelProductWarrantyMonthPopulator"/>
+
+	<bean parent="modifyPopulatorList">
+		<property name="list" ref="productConverter"/>
+		<property name="add"  ref="productWarrantyMonthPopulator"/>
+	</bean>
+
+	<bean parent="modifyPopulatorList">
+		<property name="list" ref="commerceSearchResultProductConverter"/>
+		<property name="add"  ref="searchResultApparelProductWarrantyMonthPopulator"/>
+	</bean>
 </beans>
